@@ -21,35 +21,41 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background(6, 2, 112); //light honeydew green colour
+
+background(6, 2, 112); //blue background
+//background(204,108,231);//pink background
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
-  strokeWeight(0);
+var e = 3 //eye sizing
+var z = 60 //outer wing widths
+var x = 50 //outer wing height
+
+strokeWeight(0);
 fill(93,226,231);//turquoise
 ellipse(midX+0,midY+0,200,200);
 
 strokeWeight(0.5);
 stroke(204,108,231);//pink
 fill(6,2,112);//purple
-ellipse(midX-25,midY-20,wing,wing-10);//top left wing
-ellipse(midX-25,midY+10,wing,wing-10);//top right wing
-ellipse(midX+25,midY-20,wing,wing-10);//bottom left wing
-ellipse(midX+25,midY+10,wing,wing-10);//bottom right wing
+ellipse(midX-25,midY-20,z,x);//top left wing
+ellipse(midX-25,midY+10,z,x);//top right wing
+ellipse(midX+25,midY-20,z,x);//bottom left wing
+ellipse(midX+25,midY+10,z,x);//bottom right wing
 
 //innerwing
 fill(93,226,231);//turqoise
-ellipse(midX-25,midY-20,wing-15,wing-25);
-ellipse(midX-25,midY+10,wing-15,wing-25);
-ellipse(midX+25,midY-20,wing-15,wing-25);
-ellipse(midX+25,midY+10,wing-15,wing-25);
+ellipse(midX-25,midY-20,z-15,x-15);
+ellipse(midX-25,midY+10,z-15,x-15);
+ellipse(midX+25,midY-20,z-15,x-15);
+ellipse(midX+25,midY+10,z-15,x-15);
 
 fill(6,2,112);
-ellipse(midX-25,midY-20,wing-25,wing-35);
-ellipse(midX-25,midY+10,wing-25,wing-35);
-ellipse(midX+25,midY-20,wing-25,wing-35);
-ellipse(midX+25,midY+10,wing-25,wing-35);
+ellipse(midX-25,midY-20,z-25,x-25);
+ellipse(midX-25,midY+10,z-25,x-25);
+ellipse(midX+25,midY-20,z-25,x-25);
+ellipse(midX+25,midY+10,z-25,x-25);
 
 //body
 strokeWeight(1);
@@ -60,10 +66,8 @@ ellipse(midX,midY-5,20,100);
 //eyes
 strokeWeight(0);
 fill(0);
-ellipse(midX-3,midY-43,3,3);
-ellipse(midX+3,midY-43,3,3);
-ellipse(midX,midY-38,5,3);
-
-
+ellipse(midX-3,midY-43,e,e);
+ellipse(midX+3,midY-43,e,e);
+ellipse(midX,midY-38,e+2,e);
 
 }
