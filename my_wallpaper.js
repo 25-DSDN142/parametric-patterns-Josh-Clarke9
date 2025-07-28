@@ -1,6 +1,4 @@
 //your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 30;
 
 let midX = 100;
 let midY = 100;
