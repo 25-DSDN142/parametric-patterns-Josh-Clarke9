@@ -20,36 +20,60 @@ function setup_wallpaper(pWallpaper) {
 
 function wallpaper_background() {
 
-background(6, 2, 112); //blue background
-//background(204,108,231);//pink background
+  //background(204,108,231);//pink background
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
-var e = 3 //eye sizing
-var z = 60 //outer wing widths
-var x = 50 //outer wing height
+  let red = color(255,0,0);
+  let blue = color(0,0,255);
+  let pink = color(204,108,231);
+  let turquoise = color(93,226,231);
+  let purple = color(6,2,112);
+
+  let BGC = blue
+
+
+  // // background(6, 2, 112); //blue background
+  
+  // if( BGC == blue){
+  //   ellipse(0,0,40)
+    
+  // }
+  
+  
+  
+  var e = 5 //eye sizing
+  var z = 60 //outer wing widths
+  var x = 50 //outer wing height
+  
+  if (  e>4 ){
+    BGC=pink
+    
+  }
+
+  background(BGC); //blue background
 
 strokeWeight(0);
-fill(93,226,231);//turquoise
+fill(turquoise);
 ellipse(midX+0,midY+0,200,200);
 
 strokeWeight(0.5);
-stroke(204,108,231);//pink
-fill(6,2,112);//purple
+stroke(pink);
+fill(purple);
 ellipse(midX-25,midY-20,z,x);//top left wing
 ellipse(midX-25,midY+10,z,x);//top right wing
 ellipse(midX+25,midY-20,z,x);//bottom left wing
 ellipse(midX+25,midY+10,z,x);//bottom right wing
 
 //innerwing
-fill(93,226,231);//turqoise
+fill(turquoise);
 ellipse(midX-25,midY-20,z-15,x-15);
 ellipse(midX-25,midY+10,z-15,x-15);
 ellipse(midX+25,midY-20,z-15,x-15);
 ellipse(midX+25,midY+10,z-15,x-15);
 
-fill(6,2,112);
+fill(purple);
 ellipse(midX-25,midY-20,z-25,x-25);
 ellipse(midX-25,midY+10,z-25,x-25);
 ellipse(midX+25,midY-20,z-25,x-25);
