@@ -22,7 +22,7 @@ function wallpaper_background() {
 
   //background(204,108,231);//pink background
     
-  background(0);
+  background(204,108,231);
 
 }
 
