@@ -30,6 +30,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   let pink = color(204,108,231);
   let turquoise = color(93,226,231);
   let purple = color(6,2,112);
+  let black = color(0);
 
   let BGC = blue
 
@@ -58,7 +59,7 @@ strokeWeight(0);
 fill(turquoise);
 ellipse(midX+0,midY+0,200,200);
 
-strokeWeight(0.5);
+strokeWeight(2);
 stroke(pink);
 fill(purple);
 ellipse(midX-25,midY-20,z,x);//top left wing
@@ -80,16 +81,19 @@ ellipse(midX+25,midY-20,z-25,x-25);
 ellipse(midX+25,midY+10,z-25,x-25);
 
 //body
-strokeWeight(1);
+strokeWeight(1.3);
 stroke(6,2,112);
 fill(204,108,231);
 ellipse(midX,midY-5,20,100);
 
 //eyes
 strokeWeight(0);
-fill(0);
+fill(black);
 ellipse(midX-3,midY-43,e,e);
 ellipse(midX+3,midY-43,e,e);
 ellipse(midX,midY-38,e+2,e);
 
 }
+
+
+
