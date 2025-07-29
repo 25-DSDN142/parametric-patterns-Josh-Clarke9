@@ -5,6 +5,10 @@ let midY = 100;
 let size = 40;
 let wing = 60;
 
+  var e = 5//eye sizing
+  var z = 60 //outer wing widths
+  var x = 50 //outer wing height
+
 function setup_wallpaper(pWallpaper) {
 //  pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -21,9 +25,12 @@ function setup_wallpaper(pWallpaper) {
 function wallpaper_background() {
 
   //background(204,108,231);//pink background
-    
-  background(204,108,231);
-
+  if(e > 4){
+  background(204,108,231);//purple
+}
+  else{
+    background(0,0,255)
+  }
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
@@ -35,17 +42,11 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   let turquoise = color(93,226,231);
   let purple = color(6,2,112);
   let black = color(0);
-
-  
-  var e = 5//eye sizing
-  var z = 60 //outer wing widths
-  var x = 50 //outer wing height
-  
  
   
 strokeWeight(0);//surrounding circle
 fill(turquoise);
-ellipse(midX+0,midY+0,200,200);
+ellipse(midX+0,midY+0,195,195);
 
 strokeWeight(2);
 stroke(pink);
