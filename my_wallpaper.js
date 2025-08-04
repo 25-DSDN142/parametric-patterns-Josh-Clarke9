@@ -5,12 +5,14 @@ let midY = 100;
 let size = 40;
 let wing = 60;
 
-  var e = 5//eye sizing
-  var z = 60 //outer wing widths
-  var x = 50 //outer wing height
+let s =2 //strokeweight
+
+var e = 5 //eye sizing
+var z = 60 //outer wing widths
+var x = 50 //outer wing height
 
 function setup_wallpaper(pWallpaper) {
-//  pWallpaper.output_mode(DEVELOP_GLYPH);
+  //pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.output_mode(GRID_WALLPAPER);
   
   pWallpaper.resolution(FIT_TO_SCREEN);
@@ -44,11 +46,11 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   let black = color(0);
  
   
-strokeWeight(0);//surrounding circle
+strokeWeight(s-2);//surrounding circle
 fill(turquoise);
 ellipse(midX+0,midY+0,195,195);
 
-strokeWeight(2);
+strokeWeight(s);
 stroke(pink);
 fill(purple);
 ellipse(midX-25,midY-20,z,x);//top left wing
@@ -70,17 +72,22 @@ ellipse(midX+25,midY-20,z-25,x-25);
 ellipse(midX+25,midY+10,z-25,x-25);
 
 //body
-strokeWeight(1.3);
+strokeWeight(s-0.7);
 stroke(6,2,112);
 fill(204,108,231);
 ellipse(midX,midY-5,20,100);
 
 //eyes
-strokeWeight(0);
+strokeWeight(s-2);
 fill(black);
 ellipse(midX-3,midY-43,e,e);
 ellipse(midX+3,midY-43,e,e);
 ellipse(midX,midY-38,e+2,e);
+
+//outer circles
+//strokeWeight(0);
+//fill(purple);
+//ellipse(11,13,30,30);
 
 }
 
