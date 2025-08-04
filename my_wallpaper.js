@@ -28,7 +28,7 @@ function wallpaper_background() {
 
   //background(204,108,231);//pink background
   if(e > 4){
-  background(204,108,231);//purple
+  background(204,108,231);//Pink
 }
   else{
     background(0,0,255)
@@ -42,7 +42,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   let blue = color(0,0,255);
   let pink = color(204,108,231);
   let turquoise = color(93,226,231);
-  let purple = color(6,2,112);
+  let purple = color(6,2,112); // It isn't actually purple it's dark blue but I know this every time I use "purple"
   let black = color(0);
  
   
